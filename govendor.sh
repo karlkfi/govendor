@@ -25,7 +25,8 @@ if [ -n "${PRIVATE_KEY:-}" ]; then
   PRIVATE_KEY_PARAM="-v ${PRIVATE_KEY:-}:/root/.ssh/id_rsa"
 fi
 
-docker run --rm -it \
+docker run --rm -i \
+       $(tty -s && echo '-t') \
        -v "$(pwd):/go/src/${PROJECT_IMPORT}" \
        ${PRIVATE_KEY_PARAM} \
        -w "/go/src/${PROJECT_IMPORT}" \
