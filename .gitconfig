@@ -1,4 +1,0 @@
-# This is Git's per-user configuration file.
-[core]
-[url "git@github.com:"]
-	insteadOf = https://github.com/

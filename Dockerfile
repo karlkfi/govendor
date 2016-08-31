@@ -8,7 +8,6 @@ RUN go get github.com/kardianos/govendor
 
 ENV GO15VENDOREXPERIMENT=1
 
-ADD .gitconfig /root/.gitconfig
 ADD entrypoint.sh /usr/sbin/entrypoint.sh
 
 ENTRYPOINT ["entrypoint.sh"]

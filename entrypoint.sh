@@ -8,6 +8,13 @@ set -o pipefail
 if [ -f "/root/.ssh/id_rsa" ]; then
   >/dev/null eval $(ssh-agent -s)
   ssh-add "/root/.ssh/id_rsa"
+
+  # Rewrite git urls to use the SSH key
+  cat > /root/.gitconfig <<EOF
+[core]
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+EOF
 fi
 
 govendor "$@"
