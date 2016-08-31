@@ -1,5 +1,5 @@
 # govendor
-A docker image for govendor.
+A docker image for [kardianos/govendor](https://github.com/kardianos/govendor).
 
 Purpose: Avoid installing govendor or even golang locally. To facilitate containerized development.
 
