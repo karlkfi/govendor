@@ -9,7 +9,7 @@ Purpose: Avoid installing govendor or even golang locally. To facilitate contain
 Vendor `govendor.sh` into your workspace:
 
 ```
-curl -o govendor.sh https://raw.githubusercontent.com/karlkfi/govendor/master/govendor-remote.sh
+curl -o govendor.sh https://raw.githubusercontent.com/karlkfi/govendor/master/govendor.sh
 ```
 
 Make `govendor.sh` executable:
